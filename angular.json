@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "citasMedicasApp"
+    }
+  },
+  "defaultProject": "citasMedicasApp",
+  "cli": {
+    "analytics": "ff5bedaa-9bb4-47be-8d16-64907eb9f0fd"
+  }
 }
