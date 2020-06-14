@@ -1,4 +1,4 @@
-<h2>Ranquin de medicos.</h2>
+<h2>Especialistas.</h2>
 <div class="masonry">
 
     <mat-grid-list cols="3  " rowHeight="1:3" *ngFor='let medico of medicos '>
@@ -6,34 +6,39 @@
             <mat-card-header>
                 <div mat-card-avatar class="example-header-image"></div>
                 <mat-card-title> {{medico.Nombre}}</mat-card-title>
-                <mat-card-subtitle style="color: #ffff !important; font-size: 123%;">Turnos Disponibles: {{medico.turnos}}</mat-card-subtitle>
+                <mat-card-subtitle style="color: #3c753f !important;  font-size: 106%;">Especialida: {{medico.categoria}}
+                </mat-card-subtitle>
             </mat-card-header>
-            <div class="imagen-container">
-                <img class='imagen-medico Avatar' src='{{medico.foto}}' alt="Avatar" alt="Photo of a Shiba Inu">
-            </div>
             <mat-card-content>
-                <div class="dtale-medico">
-                    <div class='expecialida'>
-                        <p>Especialidade: {{medico.categoria}}</p>
-                    </div>
-                    <div class='turnos'>
-                        <div class="ticket">
-                            <div class="ticket__content">
-                                <p class="ticket__text" matTooltip="cantidad de citas disponibles!"
-                                    matTooltipHideDelay="100">Citas dis: {{medico.turnos}}</p>
-                            </div>
+                <div class='turnos'>
+                    <div class="ticket">
+                        <div class="ticket__content">
+                            <p class="ticket__text" matTooltip="click en este elemento para optener una cita.!"
+                                matTooltipHideDelay="100">Citas disponibles: {{medico.turnos}}</p>
                         </div>
                     </div>
                 </div>
-                <div class="actions">
-                    <button mat-raised-button color="accent" matTooltip="separar una cita.!" matTooltipHideDelay="1000">
+                <div class="dtale-medico">
+                    <div class='especialida'>
+                        <p>Ranking: {{medico.rankin}}</p>
+                      
+                        <div id='conten-start' *ngFor='let index of [1,2,3,4,5]' >
+                            <mat-icon aria-hidden="start"  *ngIf="medico.rankin >= index" class='clasActivate'
+                                aria-label="Example home icon">start</mat-icon> 
+                            <mat-icon aria-hidden="start" *ngIf="medico.rankin < index" class='classStart'
+                              aria-label="Example home icon">start</mat-icon>
+                       </div>
+                        <br/>
+                        <div class='list-inf' role="listitem">Total puntos: {{medico.Total_puntos}} &   Total votos: {{medico.votos}} </div>
+                    </div>
+                    
+                </div>
+                <div class="aling-btn">            
+                    <button style="width: 269px !important;" mat-raised-button color="accent" matTooltip="separar una cita.!" matTooltipHideDelay="1000">
                         Optener un turno.</button>
-    
-                    <button mat-raised-button matTooltip="que dicen de mi!" matTooltipHideDelay="100"
-                        style="background: #1de9b6;">Ranquin: 4.5 </button>
                 </div>
             </mat-card-content>
-         
+
         </mat-card>
     </mat-grid-list>
 </div>

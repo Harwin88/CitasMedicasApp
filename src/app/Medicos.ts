@@ -7,6 +7,8 @@ export interface  Medico {
     Numero_turnos: number;
     foto: string;
     rankin: number;
+    votos: number;
+    Total_puntos: number;
     numero_de_votos: string;
     color: string;
     cols: number;

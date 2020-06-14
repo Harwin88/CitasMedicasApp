@@ -12,6 +12,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { NgxMasonryModule } from 'ngx-masonry';
 import {MatButtonModule} from '@angular/material/button';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatIconModule} from '@angular/material/icon';
+import {MatListModule} from '@angular/material/list';
 
 @NgModule({
   exports:[
@@ -31,7 +33,9 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     MatGridListModule,
     MatButtonModule,
     NgxMasonryModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatIconModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
