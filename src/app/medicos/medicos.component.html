@@ -1,23 +1,40 @@
 <h2>Ranquin de medicos.</h2>
-<div class="contenedorMedicos">
-  
-    <mat-grid-list cols="3  " rowHeight="1:3"  *ngFor='let medico of medicos '>
-           <mat-card class="example-card">
-             
-                <mat-card-header>
-                    <div mat-card-avatar class="example-header-image"></div>
-                    <mat-card-title> {{medico.Nombre}}</mat-card-title>
-                    <mat-card-subtitle>Ya es hora.</mat-card-subtitle>
-               </mat-card-header>
-               <img class='avatar' src='{{medico.foto}}' alt="Avatar" class="avatar"  alt="Photo of a Shiba Inu">
-                <mat-card-content>
-                <p> {{medico.descripcion}}</p>
-               </mat-card-content>
-               <mat-card-actions>
-                <button mat-button>LIKE</button>
-                <button mat-button>SHARE</button>
-              </mat-card-actions>
-            </mat-card>
+<div class="masonry">
+
+    <mat-grid-list cols="3  " rowHeight="1:3" *ngFor='let medico of medicos '>
+        <mat-card class="masonry-brick">
+            <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title> {{medico.Nombre}}</mat-card-title>
+                <mat-card-subtitle style="color: #ffff !important; font-size: 123%;">Turnos Disponibles: {{medico.turnos}}</mat-card-subtitle>
+            </mat-card-header>
+            <div class="imagen-container">
+                <img class='imagen-medico Avatar' src='{{medico.foto}}' alt="Avatar" alt="Photo of a Shiba Inu">
+            </div>
+            <mat-card-content>
+                <div class="dtale-medico">
+                    <div class='expecialida'>
+                        <p>Especialidade: {{medico.categoria}}</p>
+                    </div>
+                    <div class='turnos'>
+                        <div class="ticket">
+                            <div class="ticket__content">
+                                <p class="ticket__text" matTooltip="cantidad de citas disponibles!"
+                                    matTooltipHideDelay="100">Citas dis: {{medico.turnos}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="actions">
+                    <button mat-raised-button color="accent" matTooltip="separar una cita.!" matTooltipHideDelay="1000">
+                        Optener un turno.</button>
+    
+                    <button mat-raised-button matTooltip="que dicen de mi!" matTooltipHideDelay="100"
+                        style="background: #1de9b6;">Ranquin: 4.5 </button>
+                </div>
+            </mat-card-content>
+         
+        </mat-card>
     </mat-grid-list>
 </div>
 

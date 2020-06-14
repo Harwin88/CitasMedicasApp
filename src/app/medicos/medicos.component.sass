@@ -10,7 +10,9 @@ $coloreee: #EEE
   list-style-type: none
   padding: 0
   width: 15em
-
+.mate-cerd-actiones
+    top: -131px !important
+    position: relative !important
 .medicos li
   cursor: pointer
   position: relative
@@ -29,7 +31,17 @@ $coloreee: #EEE
 .medicos li.selected 
   background-color: #CFD8DC
   color: white
-
+.expecialida
+    background-color: rgba(255,255,255,.4)
+    margin: 1rem
+    width: 100%
+    margin-left: -17px
+    font-size: 147%
+    padding: 1rem
+    border: 1px solid #f0f0f0
+    text-align: center
+    margin-bottom: 11pc
+    box-shadow: -1px 13px 12px -11px rgba(0,0,0,0.5)
 .medicos li.selected:hover 
   background-color: #BBD8DC
   color: white
@@ -68,6 +80,89 @@ $coloreee: #EEE
         background-color: #444
         display: inline-block
         width: 90%
+.masonry 
+  display: grid
+  padding: 12px
+  min-heigth: 100 vh
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+  grid-gap: 16px
+  margin: repeat(4, 25px)
+  grid-template-row: masonry //para cuando lo habiliten.
+  margin-bottom: 20px
+
+.masonry-brick 
+    background-color:#17a0c8
+    color:#fff
+    
+    display: inline-block
+    width: 90%
+.imagen-container
+    width: 100%
+    padding: 20px
+    margin-bottom:12px
+    text-align: center
+.imagen-medico
+    border-radius: 70px 70px 70px 70px
+    background: linear-gradient(90deg, rgb(131, 58, 180) 0%, rgb(253, 29, 29) 50%, rgb(252, 176, 69) 100%)
+    padding: 0px  !important
+    width: 125px
+    box-shadow: -1px 13px 12px -11px rgba(144,131,181,1)
+.actions
+ position: relative
+ top:-12px
+.ticket
+  position: relative
+  box-sizing: border-box
+  top: -143px
+  width: 90%
+  height: 100px
+  margin: 150px auto 0
+  padding: 20px
+  border-radius: 10px
+  background: #FBFBFB
+  box-shadow: 2px 2px 15px 0px #5580a2
+  
+  &:before,
+  &:after
+    content: ''
+    position: absolute
+    left: 5px
+    height: 6px
+    width: 95%
+    
+  &:before
+    top: -5px
+    background: radial-gradient(circle, transparent, transparent 50%, #FBFBFB 50%, #FBFBFB 100% ) -7px -8px / 16px 16px repeat-x,
+    
+  &:after
+    bottom: -5px
+    background: radial-gradient(circle, transparent, transparent 50%, #FBFBFB 50%, #FBFBFB 100% ) -7px -2px / 16px 16px repeat-x,
+.mat-card
+    border-radius: 3px 74px 3px 3px !important
+.ticket__content
+  box-sizing: border-box
+  height: 100%
+  width: 100%
+  border: 6px solid #D8D8D8
+
+.btn-citas
+    background: #1de9b6
+
+.btn-citas
+      background: #1de9b6
+      color: #ffff
+      display: block
+  
+.info-cita
+       display: none
+.ticket__text
+  font-family: 'Helvetica', 'Arial', sans-serif
+  font-size: 177%
+  font-weight: 900
+  padding: 13px
+  text-transform: uppercase
+  color: #C6DEDE
+  transform: rotate(-4deg) 
 .example-header-image
   background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg')
   background-size: cover

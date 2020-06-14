@@ -10,6 +10,8 @@ import { MatSliderModule} from '@angular/material/slider';
 import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { NgxMasonryModule } from 'ngx-masonry';
+import {MatButtonModule} from '@angular/material/button';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 @NgModule({
   exports:[
@@ -27,7 +29,9 @@ import { NgxMasonryModule } from 'ngx-masonry';
     MatCardModule,
     BrowserAnimationsModule,
     MatGridListModule,
-    NgxMasonryModule
+    MatButtonModule,
+    NgxMasonryModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]
