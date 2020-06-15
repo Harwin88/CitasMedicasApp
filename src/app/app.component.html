@@ -11,8 +11,25 @@
 <!-- Toolbar -->
 <div class="toolbar" role="banner">
   <h1>{{title}}</h1>
-
-  <mat-slider min="1" max="100" step="1" value="1"></mat-slider>
+  <section >
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label >busqueda por especialidad</mat-label>
+      <input matInput placeholder="Medico general." >
+    </mat-form-field>
+    <mat-icon class='icon-search' aria-hidden="Search" aria-label="Example home icon">search</mat-icon> 
+  </form>
+  </section>
+  <section>
+    <div class="example-button-row">
+      <button class="btn-filtros" mat-stroked-button>Medico general</button>
+      <button class="btn-filtros" mat-stroked-button color="primary">Sirujanos</button>
+      <button class="btn-filtros" mat-stroked-button color="accent">Odontologos</button>
+      <button class="btn-filtros" mat-stroked-button color="warn">Psicologos</button>
+      <button class="btn-filtros" mat-stroked-button >Otras Expecialidades.</button>
+    </div>
+  </section>
+  <br>  
 </div>
 
 <div class="content" role="main">

@@ -14,6 +14,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatIconModule} from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   exports:[
@@ -35,7 +36,8 @@ import {MatListModule} from '@angular/material/list';
     NgxMasonryModule,
     MatTooltipModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
