@@ -1,0 +1,199 @@
+/* medicosComponent's private CSS styles */
+$marin:  0 0 2em 0
+$coloreee: #EEE
+.tarjeta
+    border: 1px solid
+    border-radius: 1px 106px 3px 1px
+    margin: 12px
+.medicos 
+  margin: $marin
+  list-style-type: none
+  padding: 0
+  width: 15em
+.mate-cerd-actiones
+    top: -131px !important
+    position: relative !important
+.medicos li
+  cursor: pointer
+  position: relative
+  left: 0
+  background-color: $coloreee
+  margin: .5em
+  padding: .3em 0
+  height: 1.6em
+  border-radius: 4px
+
+.medicos li:hover 
+  color: #607D8B
+  background-color: #DDD
+  left: .1em
+
+.medicos li.selected 
+  background-color: #CFD8DC
+  color: white
+.especialida
+    background-color: rgba(255,255,255,.4)
+    margin: 1rem
+    width: 100%
+    margin-left: -17px
+    font-size: 147%
+    padding: 1rem
+    border: 1px solid #f0f0f0
+    text-align: center
+    z-index: 3
+    margin-bottom: 3pc
+    margin-top: -120px
+    box-shadow: 5px -9px 21px -24px rgba(0, 0, 0, 0.5)
+
+.medicos li.selected:hover 
+  background-color: #BBD8DC
+  color: white
+.masonry-item 
+     width: 200px
+.medicos .badge 
+  display: inline-block
+  font-size: small
+  color: white
+  padding: 0.8em 0.7em 0 0.7em
+  background-color:#405061
+  line-height: 1em
+  position: relative
+  left: -1px
+  top: -4px
+  height: 1.8em
+  margin-right: .8em
+  border-radius: 4px 0 0 4px
+.contenedorMedicos
+  display: grid
+  padding: 12px
+  min-heigth:200 vh
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+  grid-gap: 16px
+  margin: repeat(4, 25px)
+  grid-template-row: masonry
+  margin-bottom: 20px
+.avatar
+    padding: 23px
+    width: 88px
+    height: 91px
+    margin-bottom: 16px
+.contenAvatar
+    padding: 15px 116px 0px 99px
+.example-card
+        background-color: #444
+        display: inline-block
+        width: 90%
+.masonry 
+  display: grid
+  padding: 12px
+  min-heigth: 100 vh
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+  grid-gap: 26px
+  margin: repeat(4, 25px)
+  grid-template-row: masonry //para cuando lo habiliten.
+  margin-bottom: 20px
+  margin-top: 255px
+  margin-left: 2%
+  width: 92%
+  background: rgba(0,0,0,.04)
+
+.classStart
+    color: rgba(0, 0, 0, 0.2)
+    float: left
+.clasActivate
+    color: #fbf10d
+    float: left
+.list-inf
+    margin-top: 18px !important
+    color: #105614 !important
+    font-size: 11px !important
+#conten-start
+    margin-left: 32%
+.aling-btn
+   width: 100%
+   text-align: center
+
+.masonry-brick 
+    background-color:#fafafa
+    color: #44ff40   
+    display: inline-block
+    width: 90%
+.imagen-container
+    width: 100%
+    padding: 20px
+    margin-bottom:12px
+    text-align: center
+.imagen-medico
+    border-radius: 70px 70px 70px 70px
+    background: linear-gradient(90deg, rgb(131, 58, 180) 0%, rgb(253, 29, 29) 50%, rgb(252, 176, 69) 100%)
+    padding: 0px  !important
+    width: 125px
+    box-shadow: -1px 13px 12px -11px rgba(144,131,181,1)
+.actions
+ position: relative
+ top:-12px
+.ticket
+  position: relative
+  box-sizing: border-box
+  top: -148px
+  width: 71%
+  height: 72px
+  margin: 169px auto 0
+  padding: 20px
+  border-radius: 10px
+  background: #fcf9d3
+  box-shadow: 2px 2px 15px 0px #1f202057
+
+  
+  &:before,
+  &:after
+    content: ''
+    position: absolute
+    left: 5px
+    height: 6px
+    width: 95%
+    
+  &:before
+    top: -5px
+    background: radial-gradient(circle, transparent, transparent 50%, #fcf9d3 50%, #fcf9d3 100% ) -7px -8px / 16px 16px repeat-x,
+    
+  &:after
+    bottom: -5px
+    background: radial-gradient(circle, transparent, transparent 50%, #fcf9d3 50%, #fcf9d3 100% ) -7px -2px / 16px 16px repeat-x,
+.mat-card
+    border-radius: 3px 3px 3px 3px !important
+.ticket__content
+  box-sizing: border-box
+  height: 100%
+  width: 100%
+  border: 6px solid #D8D8D8
+  border-style: dashed
+
+.btn-citas
+    background: #1de9b6
+
+.btn-citas
+      background: #1de9b6
+      color: #ffff
+      display: block
+  
+.info-cita
+       display: none
+.ticket__text
+  font-family: 'Helvetica', 'Arial', sans-serif  
+  font-size: 90%
+  font-weight: 900
+  padding: 1px
+  text-transform: uppercase
+  color: #f44336a3
+  transform: rotate(0deg)
+.example-header-image
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg')
+  background-size: cover
+@media (min-width: 600px)
+    :root 
+      --results-columns: 3
+@media (min-width: 800px)
+    :root 
+      --results-columns: 4
+      
