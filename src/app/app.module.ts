@@ -15,6 +15,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatIconModule} from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list';
 import {MatInputModule} from '@angular/material/input';
+import {MatDialogModule} from '@angular/material/dialog';
+import { CitasComponent } from './citas/citas.component';
 
 @NgModule({
   exports:[
@@ -23,6 +25,7 @@ import {MatInputModule} from '@angular/material/input';
   declarations: [
     AppComponent,
     MedicosComponent,
+    CitasComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,6 +41,8 @@ import {MatInputModule} from '@angular/material/input';
     MatIconModule,
     MatListModule,
     MatInputModule,
+    MatDialogModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
