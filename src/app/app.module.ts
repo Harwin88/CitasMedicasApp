@@ -17,6 +17,9 @@ import {MatListModule} from '@angular/material/list';
 import {MatInputModule} from '@angular/material/input';
 import {MatDialogModule} from '@angular/material/dialog';
 import { CitasComponent } from './citas/citas.component';
+import {MatTableModule} from '@angular/material/table';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatTabsModule} from '@angular/material/tabs';
 
 @NgModule({
   exports:[
@@ -42,6 +45,10 @@ import { CitasComponent } from './citas/citas.component';
     MatListModule,
     MatInputModule,
     MatDialogModule,
+    MatTableModule,
+    MatRadioModule,
+    MatTabsModule,
+    
     
   ],
   providers: [],

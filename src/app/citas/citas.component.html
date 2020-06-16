@@ -1,8 +1,117 @@
-<h2 mat-dialog-title>Install Angular</h2>
+<h2 mat-dialog-title>Reserva a qui tus citas.</h2>
 <mat-dialog-content class="mat-typography">
- <h1>Reserva de citas</h1>
+  <h1>Reserva de citas</h1>
+  <div class="example-container mat-elevation-z8 ">
+    <mat-radio-group
+    aria-labelledby="example-radio-group-label"
+    class="example-radio-group"
+    >
+    <mat-tab-group >
+      <mat-tab label="Lunes." >
+        <div class="grid-app ">
+          <mat-grid-list cols="3" rowHeight="1:3" *ngFor="let season of valueDos">
+              <div  *ngIf='season.Lunes != "0"' class="masonry-brick"> 
+                <div class='turnos' >
+                  <div (click)="optenerTurnos(season.Lunes, 'Lunes', season.id)" class="ticket">
+                      <div class="ticket__content" >
+                          <p class="ticket__text" matTooltip="clic para obtener este turno.!"
+                              matTooltipHideDelay="100">{{season.Lunes}}</p>
+                      </div>
+                  </div>
+                </div>  
+              </div>      
+          </mat-grid-list>
+        </div>
+      </mat-tab>
+      <mat-tab label="Martes.">
+        <div class="grid-app ">
+          <mat-grid-list cols="3" rowHeight="1:3" *ngFor="let season of valueDos">
+              <div *ngIf='season.martes != 0'  class="masonry-brick"> 
+                <div class='turnos' >
+                  <div   (click)="optenerTurnos(season.martes, 'martes', season.id)" class="ticket">
+                      <div class="ticket__content" >
+                          <p class="ticket__text" matTooltip="clic para obtener este turno.!"
+                              matTooltipHideDelay="100">{{season.martes}}</p>
+                      </div>
+                  </div>
+                </div>  
+              </div>      
+          </mat-grid-list>
+        </div>
+    </mat-tab>
+    <mat-tab label="Miercoles.">
+      <div class="grid-app ">
+        <mat-grid-list cols="3" rowHeight="1:3" *ngFor="let season of valueDos">
+            <div *ngIf='season.mircoles !="0"' class="masonry-brick"> 
+              <div class='turnos' >
+                <div   (click)="optenerTurnos(season.mircoles, 'mircoles', season.id)" class="ticket">
+                    <div class="ticket__content" >
+                        <p class="ticket__text" matTooltip="clic para obtener este turno.!"
+                            matTooltipHideDelay="100">{{season.mircoles}}</p>
+                    </div>
+                </div>
+              </div>  
+            </div>      
+        </mat-grid-list>
+      </div>
+   </mat-tab>
+   <mat-tab label="Jueves.">
+    <div class="grid-app ">
+      <mat-grid-list cols="3" rowHeight="1:3" *ngFor="let season of valueDos">
+          <div *ngIf='season.Jueves != 0' class="masonry-brick"> 
+            <div class='turnos' >
+              <div   (click)="optenerTurnos(season.Jueves, 'Jueves', season.id)" class="ticket">
+                  <div class="ticket__content" >
+                      <p class="ticket__text" matTooltip="clic para obtener este turno.!"
+                          matTooltipHideDelay="100">{{season.Jueves}}</p>
+                  </div>
+              </div>
+            </div>  
+          </div>      
+      </mat-grid-list>
+    </div>
+   </mat-tab>
+   <mat-tab label="Viernes.">
+    <div class="grid-app ">
+      <mat-grid-list cols="3" rowHeight="1:3" *ngFor="let season of valueDos">
+          <div *ngIf='season.Viernes != 0'  class="masonry-brick"> 
+            <div class='turnos' >
+              <div   (click)="optenerTurnos(season.Viernes, 'Viernes', season.id)" class="ticket">
+                  <div class="ticket__content" >
+                      <p class="ticket__text" matTooltip="clic para obtener este turno.!"
+                          matTooltipHideDelay="100">{{season.Viernes}}</p>
+                  </div>
+              </div>
+            </div>  
+          </div>      
+      </mat-grid-list>
+    </div>
+   </mat-tab>
+   <mat-tab label="Sabado">
+    <div class="grid-app ">
+      <mat-grid-list cols="3" rowHeight="1:3" *ngFor="let season of valueDos">
+          <div *ngIf='season.Sabado != "0"' class="masonry-brick"> 
+            <div class='turnos' >
+              <div   (click)="optenerTurnos(season.Sabado, 'Sabado', season.id)" class="ticket">
+                  <div class="ticket__content" >
+                      <p class="ticket__text" matTooltip="clic para obtener este turno.!"
+                          matTooltipHideDelay="100">{{season.Sabado}}</p>
+                  </div>
+              </div>
+            </div>  
+          </div>      
+      </mat-grid-list>
+    </div>
+   </mat-tab>
+  </mat-tab-group>
+</mat-radio-group>
+
+
+  </div>
+
 </mat-dialog-content>
+<h1>Turno Selecionado: {{turnos}}</h1>
 <mat-dialog-actions align="end">
   <button mat-button mat-dialog-close>Cancel</button>
-  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Install</button>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Enviar Cita.</button>
 </mat-dialog-actions>
