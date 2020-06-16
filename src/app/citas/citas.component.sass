@@ -1,0 +1,96 @@
+.example-container
+  height: 485px
+  width: 550px
+  color: #216225
+
+table
+  width: 800px
+  color: #216225
+
+
+td.mat-column-star
+  width: 20px
+  padding-right: 8px
+
+
+th.mat-column-position, td.mat-column-position
+  padding-left: 8px
+  color: #216225
+  position: fixed
+
+
+.mat-table-sticky:first-child
+  border-right: 1px solid #e0e0e0
+
+
+.mat-table-sticky:last-child
+  border-left: 1px solid #e0e0e0
+
+.example-radio-group
+  display: flex
+  flex-direction: column
+  margin: 15px 0
+
+
+.example-radio-button
+  margin: 5px
+
+.grid-app 
+  display: grid 
+  padding: 12px 
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)) 
+  grid-gap: 26px 
+
+  .masonry-brick 
+    background-color:#fafafa
+    color: #44ff40   
+    display: inline-block
+    width: 50%
+
+.ticket
+  position: relative
+  box-sizing: border-box
+  margin-top: 28px
+  width: 150%
+  height: 82px
+  margin-left: 2px 
+  padding: 20px
+  border-radius: 10px
+  background: #fcf9d3
+  box-shadow: 2px 2px 15px 0px #1f202057
+  
+
+  
+  &:before,
+  &:after
+    content: ''
+    position: absolute
+    left: 5px
+    height: 6px
+    width: 95%
+    
+  &:before
+    top: -5px
+    background: radial-gradient(circle, transparent, transparent 50%, #fcf9d3 50%, #fcf9d3 100% ) -7px -8px / 16px 16px repeat-x,
+    
+  &:after
+    bottom: -5px
+    background: radial-gradient(circle, transparent, transparent 50%, #fcf9d3 50%, #fcf9d3 100% ) -7px -2px / 16px 16px repeat-x,
+.mat-card
+    border-radius: 3px 3px 3px 3px !important
+
+.ticket__content
+  box-sizing: border-box
+  height: 100%
+  width: 100%
+  border: 6px solid #D8D8D8
+  border-style: dashed
+
+.ticket__text
+  font-family: 'Helvetica', 'Arial', sans-serif  
+  font-size: 90%
+  font-weight: 900
+  padding: 1px
+  text-transform: uppercase
+  color: #f44336a3
+  transform: rotate(0deg)
